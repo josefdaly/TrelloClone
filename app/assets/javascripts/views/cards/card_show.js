@@ -1,20 +1,22 @@
-TrelloClone.Views.BoardsIndexItem = Backbone.View.extend({
+TrelloClone.Views.CardShow = Backbone.CompositeView.extend({
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },
+  template: JST['cards/show'],
   events: {
-    'click i.remove': 'deleteBoard'
+    'click button.delete-card': 'deleteCard'
   },
-  template: JST['boards/index_item'],
   tagName: 'li',
-  className: 'board-index-item',
+  className: 'well',
   render: function () {
-    var content = this.template({board: this.model});
+    var content = this.template({ card: this.model });
     this.$el.html(content);
+
     return this;
   },
-  deleteBoard: function (event) {
+  deleteCard: function (event) {
     event.preventDefault();
     this.model.destroy();
   }
+
 });

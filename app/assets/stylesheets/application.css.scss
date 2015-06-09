@@ -16,3 +16,52 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+li.new-list {
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+
+li.new-list form {
+  margin-left: 100px;
+}
+
+li.panel h4 {
+  text-align: center;
+}
+
+li.list-show {
+  width: 25%;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: #E0F0FF;
+  min-height: 40px;
+}
+
+li.well {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #99CCFF;
+}
+
+.board-index-item {
+  display: block;
+  float: left;
+  border-radius: 10px;
+  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #CCFFFF;
+}
+
+// #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+// #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+// #sortable li span { position: absolute; margin-left: -1.3em; }

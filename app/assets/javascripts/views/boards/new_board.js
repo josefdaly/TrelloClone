@@ -12,12 +12,14 @@ TrelloClone.Views.NewBoard = Backbone.View.extend({
   addBoard: function(event) {
     event.preventDefault();
     var newTitle = this.$('.add-board').val();
-    var newBoard = new TrelloClone.Models.Board({ 'title': newTitle });
-    var that = this;
+    var newBoard = new TrelloClone.Models.Board({
+      'title': newTitle
+    });
     newBoard.save({}, {
       success: function () {
         this.collection.add(newBoard);
       }.bind(this)
     });
+    $('input.add-board').val("");
   }
 });
