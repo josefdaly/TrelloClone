@@ -24,13 +24,14 @@ html, body {
 body {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Moleskine_ruled_notebook,_inside_view.jpg");
   background-size: cover;
-  padding-top: 10px;
+  padding-top: 17px;
 }
 
 .navbar {
   position: fixed;
   opacity: .75;
-  background-color: black;
+  // opacity: 0;
+  // background-color: black;
   margin-top: 0;
   margin-left: 10px;
   margin-right: 10px;
@@ -39,9 +40,13 @@ body {
   width: calc(100% - 20px);
   border: 0;
 }
-.navbar-brand {  
-  color: white;
+.navbar-brand {
+  font-family: 'Amatic SC';
+  font-size: 55px;
+  color: black;
   text-decoration: none;
+  font-weight: 700;
+  // text-decoration: underline;
 }
 .backdrop {
   position: fixed;
@@ -91,6 +96,8 @@ li.well {
 }
 
 .board-index-item {
+  font-family: 'Amatic SC';
+  font-size: 30px;
   display: block;
   float: left;
   border-radius: 10px;
@@ -101,7 +108,7 @@ li.well {
   padding-right: 10px;
   background: black;
   padding: 10px;
-  opacity: .75;
+  opacity: .5;
   color: white;
 }
 
@@ -116,18 +123,29 @@ li.well {
 
 .login-signup{
   width: 168px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 12%;
+  // margin-right: auto;
   margin-top: 10%;
-  background: black;
+  // background: black;
   padding: 20px;
-  opacity: .7;
+  // opacity: .7;
   width: 210px;
   border-radius: 10px;
+  font-family: 'Amatic SC';
 }
 
 .login-signup h1 {
-  color: white;
+  color: black;
+}
+
+.login-signup input {
+  font-size: 40px;
+  border: none;
+    outline:none;
+    background-color:rgba(0, 0, 0, 0);
+    text-align: left;
+
+
 }
 
 .login-signup-header {
@@ -142,6 +160,10 @@ li.well {
   color: white;
 }
 
+.my-boards{
+  margin-left: 12%;
+  font-family: 'Amatic SC';
+}
 
 // #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
 // #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
