@@ -17,6 +17,41 @@
 @import "bootstrap";
 @import "font-awesome";
 
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Moleskine_ruled_notebook,_inside_view.jpg");
+  background-size: cover;
+  padding-top: 10px;
+}
+
+.navbar {
+  position: fixed;
+  opacity: .75;
+  background-color: black;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: calc(100% - 20px);
+  border: 0;
+}
+.navbar-brand {  
+  color: white;
+  text-decoration: none;
+}
+.backdrop {
+  position: fixed;
+  top: 70px;
+  height: calc(100% - 70px);
+  width: 100%;
+  overflow-X: scroll;
+  overflow-Y: hidden;
+}
+
 ul {
   list-style-type: none;
   padding: 0px;
@@ -43,6 +78,9 @@ li.list-show {
   margin-right: 20px;
   background: #E0F0FF;
   min-height: 40px;
+  overflow-Y: scroll;
+  // include max-height when everythings worked out
+  // max-height:
 }
 
 li.well {
@@ -56,21 +94,54 @@ li.well {
   display: block;
   float: left;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
+  width: calc(25% - 20px);
+  height: 100px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #CCFFFF;
+  background: black;
+  padding: 10px;
+  opacity: .75;
+  color: white;
+}
+
+.boards-index {
+  width: 100%;
+}
+
+.board-index-item:hover {
+  opacity: .9;
+  cursor: pointer;
 }
 
 .login-signup{
   width: 168px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  background: black;
+  padding: 20px;
+  opacity: .7;
+  width: 210px;
+  border-radius: 10px;
+}
 
+.login-signup h1 {
+  color: white;
 }
 
 .login-signup-header {
   text-align: center;
 }
+
+.index-item-delete{
+  float: right;
+}
+
+.board-title{
+  color: white;
+}
+
 
 // #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
 // #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }

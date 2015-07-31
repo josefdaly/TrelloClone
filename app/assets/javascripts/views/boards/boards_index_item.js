@@ -3,7 +3,8 @@ TrelloClone.Views.BoardsIndexItem = Backbone.View.extend({
     this.listenTo(this.model, 'sync', this.render);
   },
   events: {
-    'click i.remove': 'deleteBoard'
+    'click i.remove': 'deleteBoard',
+    'click': 'redirect'
   },
   template: JST['boards/index_item'],
   tagName: 'li',
@@ -16,5 +17,9 @@ TrelloClone.Views.BoardsIndexItem = Backbone.View.extend({
   deleteBoard: function (event) {
     event.preventDefault();
     this.model.destroy();
+  },
+  redirect: function (event) {
+    event.preventDefault();
+    Backbone.history.navigate("boards/" + this.model.id, {trigger: true})
   }
 });

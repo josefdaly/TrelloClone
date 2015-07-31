@@ -1,6 +1,7 @@
 TrelloClone.Views.NewBoard = Backbone.View.extend({
   template: JST['boards/new_board'],
   tagName: 'li',
+  className: 'new-board',
   events: {
     "click .add-button": "addBoard"
   },
