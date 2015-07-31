@@ -54,7 +54,7 @@ body {
   height: calc(100% - 70px);
   width: 100%;
   overflow-X: scroll;
-  overflow-Y: hidden;
+  // overflow-Y: scroll;
 }
 
 ul {
@@ -108,12 +108,40 @@ li.well {
   padding-right: 10px;
   background: black;
   padding: 10px;
-  opacity: .5;
+  opacity: .7;
   color: white;
+}
+
+.new-board {
+  font-family: 'Amatic SC';
+  font-size: 30px;
+  display: block;
+  float:left;
+  border-radius: 10px;
+  margin: 10px;
+  width: 100%;
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: gray;
+  padding: 10px;
+  opacity: .8;
+  color: white;
+}
+
+.create-new {
+  float: left;
+  width: calc(25% - 30px)
+}
+
+.new-board:hover {
+  opacity: .9;
+  cursor: pointer;
 }
 
 .boards-index {
   width: 100%;
+  padding: 20px;
 }
 
 .board-index-item:hover {
@@ -163,6 +191,17 @@ li.well {
 .my-boards{
   margin-left: 12%;
   font-family: 'Amatic SC';
+}
+
+.add-board-form-hidden{
+  display: none;
+}
+
+.add-board-form-show{
+  display: block;
+  font-size: 22px;
+  color: black;
+  opacity: 1;
 }
 
 // #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }

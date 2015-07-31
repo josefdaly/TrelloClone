@@ -3,7 +3,9 @@ TrelloClone.Views.NewBoard = Backbone.View.extend({
   tagName: 'li',
   className: 'new-board',
   events: {
-    "click .add-button": "addBoard"
+    "click .add-button": "addBoard",
+    "click": "showForm",
+    // "mouseout": "hideForm"
   },
   render: function () {
     var content = this.template();
@@ -19,8 +21,22 @@ TrelloClone.Views.NewBoard = Backbone.View.extend({
     newBoard.save({}, {
       success: function () {
         this.collection.add(newBoard);
+        Backbone.history.navigate(
+          'boards/' + newBoard.id, { trigger: true }
+        );
       }.bind(this)
     });
     $('input.add-board').val("");
+  },
+  showForm: function(event) {
+    event.preventDefault();
+    var $el = $('.add-board-form-hidden');
+    $el.removeClass('add-board-form-hidden');
+    $el.addClass('add-board-form-show');
+  },
+  hideForm: function() {
+    var $el = $('.add-board-form-show');
+    $el.removeClass('add-board-form-show');
+    $el.addClass('add-board-form-hidden');
   }
 });
