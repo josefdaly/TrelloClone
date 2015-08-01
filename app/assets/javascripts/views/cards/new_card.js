@@ -1,7 +1,7 @@
 TrelloClone.Views.NewCard = Backbone.View.extend({
   template: JST['cards/new_card'],
   tagName: 'li',
-  className: 'well',
+  className: 'card',
   events: {
     "click .add-card-button": "addCard"
   },

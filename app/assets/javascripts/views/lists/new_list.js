@@ -2,10 +2,11 @@ TrelloClone.Views.NewList = Backbone.View.extend({
   initialize: function () {},
   template: JST['lists/new_list'],
   tagName: 'li',
-  className: 'panel panel-default new-list',
+  className: 'new-board create-new new-list',
   events: {
     "click .add-button": "addList",
-    // "click .add-button": "emptyFields"
+    // "click .add-button": "emptyFields",
+    "click": "showForm"
   },
   render: function () {
     var content = this.template();
@@ -27,4 +28,10 @@ TrelloClone.Views.NewList = Backbone.View.extend({
     });
     $listTitle = $('input.add-list').val("");
   },
+  showForm: function(event) {
+    event.preventDefault();
+    var $el = $('.add-list-form-hidden');
+    $el.removeClass('add-list-form-hidden');
+    $el.addClass('add-board-form-show');
+  }
 });

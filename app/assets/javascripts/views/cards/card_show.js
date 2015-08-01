@@ -7,7 +7,7 @@ TrelloClone.Views.CardShow = Backbone.CompositeView.extend({
     'click button.delete-card': 'deleteCard'
   },
   tagName: 'li',
-  className: 'well',
+  className: 'card',
   render: function () {
     var content = this.template({ card: this.model });
     this.$el.html(content);

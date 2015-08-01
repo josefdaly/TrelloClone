@@ -62,30 +62,37 @@ ul {
   padding: 0px;
 }
 
-li.new-list {
- padding-top: 30px;
- padding-bottom: 30px;
+.lists-index {
+ margin: 20px;
 }
 
-li.new-list form {
-  margin-left: 100px;
-}
-
-li.panel h4 {
-  text-align: center;
-}
 
 li.list-show {
-  width: 25%;
-  display: block;
-  float: left;
+  width: 250px;
+  display: inline-block;
+  // float: left;
   margin-left: 20px;
   margin-right: 20px;
-  background: #E0F0FF;
+  background: black;
+  opacity: .6;
+  padding: 10px;
   min-height: 40px;
-  overflow-Y: scroll;
+  // overflow-Y: scroll;
+  border-radius: 10px;
   // include max-height when everythings worked out
   // max-height:
+  font-family: 'Amatic SC';
+}
+
+.list-show:hover {
+  opacity: .8;
+}
+
+.card {
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 li.well {
@@ -103,13 +110,10 @@ li.well {
   border-radius: 10px;
   margin: 10px;
   width: calc(25% - 20px);
-  height: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background: black;
+  height: 65px;
   padding: 10px;
-  opacity: .7;
-  color: white;
+  // opacity: .7;
+  color: black;
 }
 
 .new-board {
@@ -126,7 +130,7 @@ li.well {
   background: gray;
   padding: 10px;
   opacity: .8;
-  color: white;
+  // color: white;
 }
 
 .create-new {
@@ -145,8 +149,10 @@ li.well {
 }
 
 .board-index-item:hover {
-  opacity: .9;
+  opacity: .5;
   cursor: pointer;
+  background: gray;
+  color: white;
 }
 
 .login-signup{
@@ -185,7 +191,7 @@ li.well {
 }
 
 .board-title{
-  color: white;
+  color: black;
 }
 
 .my-boards{
@@ -204,6 +210,20 @@ li.well {
   opacity: 1;
 }
 
+.add-list-form-hidden{
+  display: none;
+}
+
+.add-list-form-show{
+  display: block;
+  font-size: 22px;
+  color: black;
+  opacity: 1;
+}
+
+.main {
+  min-width: 950px;
+}
 // #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
 // #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
 // #sortable li span { position: absolute; margin-left: -1.3em; }
